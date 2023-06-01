@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 *,
 *::after,
 *::before {
@@ -35,7 +36,15 @@ header {
   display: none;
 }
 
-.header-nav a:hover {
+.toolbar-section a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: blue;
+}
+
+.header-nav > a:hover {
   color: blue;
 }
 
@@ -45,16 +54,8 @@ header {
   align-items: center;
   width: 90%;
   margin: auto;
-  
 }
 
-.toolbar-section  a {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 18px;
-  color: blue;
-}
 .toolbar-hamburger {
   cursor: pointer;
 }
