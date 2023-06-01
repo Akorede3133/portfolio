@@ -5,3 +5,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+header {
+    padding: 10px 0;
+}
+.toolbar-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.toolbar-section .fa-bars, .toolbar-section .logo {
+    color: blue;
+}
