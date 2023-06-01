@@ -1,20 +1,74 @@
-*, 
+*,
 *::after,
 *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 header {
-    padding: 10px 0;
+  padding: 10px 0;
 }
+
 .toolbar-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
 }
-.toolbar-section .fa-bars, .toolbar-section .logo {
-    color: blue;
+
+.toolbar-section .logo {
+  color: blue;
+  font-size: 1.4rem;
+}
+
+.toolbar-hamburger {
+  cursor: pointer;
+}
+
+.header-hero-section {
+  margin-top: 20px;
+  height: 100vh;
+  width: 100%;
+  padding: 0 20px;
+  background: url(images/header-shapes\ mobile.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-intro {
+  font-size: 3rem;
+  color: rgba(23, 43, 77, 1);
+}
+
+.hero-desc {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #344563;
+  padding: 10px 0;
+}
+
+.hero-connect-text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #7f8cff;
+  padding: 15px 0;
+}
+
+.hero-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-icon-container img {
+  width: 19px;
+  height: 20px;
 }
