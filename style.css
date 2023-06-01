@@ -6,8 +6,35 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #344563;
+}
+
+ul {
+  list-style: none;
+}
+
 header {
   padding: 10px 0;
+  border-bottom-left-radius: 7%;
+  background-color: white;
+}
+
+.header-nav {
+  display: none;
+}
+
+.header-nav a:hover {
+  color: blue;
 }
 
 .toolbar-section {
@@ -71,4 +98,34 @@ header {
 .hero-icon-container img {
   width: 19px;
   height: 20px;
+}
+
+@media (min-width: 786px) {
+  .toolbar-section {
+    width: 80%;
+    margin: auto;
+  }
+
+  .toolbar-hamburger {
+    display: none;
+  }
+
+  .header-nav {
+    display: block;
+  }
+
+  .header-nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .header-hero-section {
+    width: 90%;
+    margin: 20px auto;
+    padding: 0 150px;
+  }
+
+  .see-break {
+    display: none;
+  }
 }
