@@ -29,7 +29,7 @@ header {
   background-color: white;
 }
 
-.header-nav {
+.nav-link {
   display: none;
 }
 
@@ -110,9 +110,6 @@ header {
     display: none;
   }
 
-  .header-nav {
-    display: block;
-  }
 
   .header-nav ul {
     display: flex;
