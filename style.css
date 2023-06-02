@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #344563;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  padding: 10px 0;
+  border-bottom-left-radius: 7%;
+  background-color: white;
+}
+
+.nav-link {
+  display: none;
+}
+
+.toolbar-section a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: blue;
+}
+
+.header-nav > a:hover {
+  color: blue;
+}
+
+.toolbar-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.toolbar-hamburger {
+  cursor: pointer;
+}
+
+.header-hero-section {
+  margin-top: 20px;
+  height: 100vh;
+  width: 100%;
+  padding: 0 20px;
+  background: url(images/header-shapes\ mobile.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-intro {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  color: rgba(23, 43, 77, 1);
+}
+
+.hero-desc {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 2rem;
+  color: #344563;
+  padding: 10px 0;
+}
+
+.hero-connect-text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #7f8cff;
+  padding: 15px 0;
+}
+
+.hero-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-icon-container img {
+  width: 19px;
+  height: 20px;
+}
+
+@media (min-width: 786px) {
+  .toolbar-section {
+    width: 80%;
+    margin: auto;
+  }
+
+  .toolbar-hamburger {
+    display: none;
+  }
+
+  .header-nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .header-hero-section {
+    width: 90%;
+    margin: 20px auto;
+    padding: 0 150px;
+  }
+
+  .see-break {
+    display: none;
+  }
+}
