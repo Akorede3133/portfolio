@@ -13,6 +13,10 @@ body {
   background-color: #e5e5e5;
   margin-bottom: 20px;
 }
+main {
+  width: 90%;
+  margin: 20px auto;
+}
 
 a {
   text-decoration: none;
@@ -112,7 +116,104 @@ header {
   width: 19px;
   height: 20px;
 }
+.project-section {
+  display: grid;
+  gap: 7rem;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+article img {
+  width: 100%;
+}
+.project-description h2 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #091E42;
+  padding-bottom: 10px;
+}
+.project-description .experience-list, .project-description .skill-list {
+  display: flex;
+  align-items: center;
+  list-style-type: disc;
+  gap: 2rem;
+}
+.project-description .skill-list {
+  list-style: none;
+  padding: 10px 0;
+}
+.skill-list li {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: #6070FF;
+  background: #EBEBFF;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 5px;
+}
+.project-description .experience-list li {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  color: #7A869A;
+}
+.project-description .experience-list li:first-child {
+  list-style: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #344563;
+}
+.project-description >  p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  padding: 15px 0;
+}
+.project-description button {
+  background: #4053FC;
+  box-shadow: 0px 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  margin: 20px 0;
+}
+.project-description button a {
+  display: block;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-size: 17px;
 
+}
+.project-description button:hover {
+  background: #FFFFFF;  
+  border: 1px solid #7F8CFF;
+  border-radius: 8px;
+}
+.project-description button:hover a {
+  color: #396DF2;
+}
+.experience-list li::marker {
+  color: gray;
+}
 @media (min-width: 786px) {
   .toolbar-section {
     width: 80%;
@@ -136,5 +237,19 @@ header {
 
   .see-break {
     display: none;
+  }
+  article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  article:nth-child(even) {
+    padding: 15px 30px;
+  }
+  article:nth-child(even) div:nth-child(1) {
+    order: 2;
+  }
+  .project-description {
+    margin-top: 20px;
   }
 }
