@@ -10,13 +10,14 @@
 }
 
 body {
-  background-color: #e5e5e5;
   margin-bottom: 20px;
+  background-color: #f7f7f9;
 }
 
 main {
   width: 90%;
   margin: 20px auto;
+  background-color: #f7f7f9;
 }
 
 a {
@@ -47,15 +48,6 @@ header {
   font-style: normal;
   font-size: 18px;
   color: blue;
-}
-
-.project-description button a,
-.about-section button a {
-  display: block;
-  width: 100%;
-  color: white;
-  padding: 10px;
-  font-size: 17px;
 }
 
 .header-nav > a:hover {
@@ -176,6 +168,7 @@ article {
 .project-description .skill-list {
   list-style: none;
   padding: 10px 0;
+  gap: 0.7rem;
 }
 
 .skill-list li {
@@ -183,11 +176,9 @@ article {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  letter-spacing: 0.03em;
   color: #6070ff;
   background: #ebebff;
-  align-items: center;
-  padding: 7px 12px;
+  padding: 7px;
   border-radius: 5px;
 }
 
@@ -203,8 +194,7 @@ article {
   list-style: none;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 800;
   line-height: 24px;
   color: #344563;
 }
@@ -227,17 +217,17 @@ article {
   outline: none;
   border: none;
   margin: 20px 0;
+  color: white;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
 }
 
-.project-description button:hover,
-.about-section button:hover {
+.project-description button:focus,
+.about-section button:focus {
   background: #fff;
   border: 1px solid #7f8cff;
   border-radius: 8px;
-}
-
-.project-description button:hover a,
-.about-section button:hover a {
   color: #396df2;
 }
 
