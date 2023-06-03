@@ -10,8 +10,14 @@
 }
 
 body {
-  background-color: #e5e5e5;
   margin-bottom: 20px;
+  background-color: #f7f7f9;
+}
+
+main {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #f7f7f9;
 }
 
 a {
@@ -113,6 +119,187 @@ header {
   height: 20px;
 }
 
+.project-section {
+  display: grid;
+  gap: 7rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.project-container img {
+  width: 100%;
+}
+
+.dropdown-list li {
+  display: flex;
+  align-items: center;
+  background: #f7f7f9;
+  gap: 1rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.project-description h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #091e42;
+  padding-bottom: 10px;
+}
+
+.project-description .experience-list,
+.project-description .skill-list {
+  display: flex;
+  align-items: center;
+  list-style-type: disc;
+  gap: 2rem;
+}
+
+.project-description .skill-list {
+  list-style: none;
+  padding: 10px 0;
+  gap: 0.7rem;
+}
+
+.skill-list li {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #6070ff;
+  background: #ebebff;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.project-description .experience-list li {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  color: #7a869a;
+}
+
+.project-description .experience-list li:first-child {
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  color: #344563;
+}
+
+.project-description > p {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  padding: 15px 0;
+}
+
+.project-description button,
+.about-section button {
+  background: #4053fc;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  margin: 20px 0;
+  color: white;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.project-description button:focus,
+.about-section button:focus {
+  background: #fff;
+  border: 1px solid #7f8cff;
+  border-radius: 8px;
+  color: #396df2;
+}
+
+.experience-list li::marker {
+  color: gray;
+}
+
+.about-section {
+  background-color: #fff;
+  margin-top: 3rem;
+  border-top-right-radius: 60px;
+  padding: 100px 15px;
+  overflow: hidden;
+}
+
+.about-section .about-text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #344563;
+  padding: 5px 0;
+}
+
+.about-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #172b4d;
+}
+
+.about-section .about-connect-text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7f8cff;
+  padding: 7px 0;
+}
+
+.dropdown:not(:first-child) {
+  padding: 15px 0;
+  border-bottom: 1px solid  #dfe1e6;
+}
+
+.dropdown p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown p > span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+}
+
+.dropdown-list li span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #253858;
+}
+
+.dropdown img {
+  width: 30px;
+}
+
 @media (min-width: 786px) {
   .toolbar-section {
     width: 80%;
@@ -136,5 +323,69 @@ header {
 
   .see-break {
     display: none;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  article:nth-child(even) {
+    padding: 15px 30px;
+  }
+
+  article:nth-child(even) div:nth-child(1) {
+    order: 2;
+  }
+
+  .project-description {
+    margin-top: 20px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .project-section {
+    width: 90%;
+    margin: auto;
+  }
+
+  .about-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 20px 100px;
+  }
+
+  .dropdown p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .dropdown-list li {
+    background: #f7f7f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 30px;
+  }
+
+  .about-section .about-text {
+    padding: 0;
+  }
+
+  .about-section h2 {
+    padding: 2px 0;
   }
 }
