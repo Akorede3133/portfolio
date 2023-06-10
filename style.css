@@ -95,6 +95,19 @@ header {
   font-style: normal;
   font-size: 40px;
   color: rgba(23, 43, 77, 1);
+  animation-name: slideLeft;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .hero-desc {
@@ -128,6 +141,19 @@ header {
   height: 20px;
 }
 
+.project-container img {
+  width: 100%;
+}
+
+.dropdown img {
+  width: 19px;
+}
+
+.hero-icon-container img:hover {
+  transition: all 0.7s linear;
+  transform: scale(1.3);
+}
+
 .project-section {
   display: grid;
   width: 90%;
@@ -143,10 +169,6 @@ article {
   padding: 15px;
   background-color: white;
   border-radius: 10px;
-}
-
-.project-container img {
-  width: 100%;
 }
 
 .dropdown-list li {
@@ -342,10 +364,6 @@ article {
   font-weight: 500;
   font-size: 15px;
   color: #253858;
-}
-
-.dropdown img {
-  width: 19px;
 }
 
 .form-section {
