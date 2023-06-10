@@ -226,7 +226,7 @@ article {
   border-radius: 8px;
   outline: none;
   margin: 20px 0;
-  padding: 10px;
+  padding: 12px;
   font-size: 17px;
   cursor: pointer;
   background: #fff;
@@ -265,6 +265,12 @@ article {
   background: #fff;
   border: 1px solid #7f8cff;
   color: #396df2;
+}
+
+.project-description button:active,
+.about-section button:active {
+  background: #2230d2;
+  color: #fff;
 }
 
 .project-description button:hover,
