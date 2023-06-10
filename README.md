@@ -93,6 +93,11 @@ After cloning the repository, navigate into the project's directory. If there ar
 - GitHub: [@githubhandle](https://github.com/Akorede3133)
 - Twitter: [@twitterhandle](https://twitter.com/SaheedAkorede7)
 
+👤 **Lewis**
+- GitHub: [@githubhandle](https://github.com/lewisjn-arch)
+👤 **Okari**
+- GitHub: [@githubhandle](https://github.com/2004-okari)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
