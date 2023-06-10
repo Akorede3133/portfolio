@@ -459,7 +459,7 @@ form textarea {
 
   .dropdown-list {
     display: flex;
-    gap: 2rem;
+    gap: .7rem;
   }
 
   .dropdown-list li {
