@@ -36,10 +36,19 @@ header {
   padding: 10px 0;
   border-bottom-left-radius: 7%;
   background-color: white;
+  margin-bottom: 100px;
 }
 
 .nav-link {
   display: none;
+}
+
+.nav-link li > a {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #344563;
 }
 
 .toolbar-section a {
@@ -72,9 +81,9 @@ header {
   width: 100%;
   padding: 0 20px;
   background: url(images/header-shapes\ mobile.png);
-  background-position: top;
+  background-position: right 100% bottom 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -383,7 +392,17 @@ form textarea {
   border-radius: 50%;
 }
 
-@media (min-width: 786px) {
+@media (min-width: 768px) {
+  .header-hero-section {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0 200px;
+    background: url(images/header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
   .toolbar-section {
     width: 80%;
     margin: auto;
@@ -398,77 +417,7 @@ form textarea {
     gap: 2rem;
   }
 
-  .header-hero-section {
-    width: 90%;
-    margin: 20px auto;
-    padding: 0 150px;
-  }
-
   .see-break {
     display: none;
-  }
-
-  article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  article:nth-child(even) {
-    padding: 15px 30px;
-  }
-
-  article:nth-child(even) div:nth-child(1) {
-    order: 2;
-  }
-
-  .project-description {
-    margin-top: 20px;
-  }
-
-  main {
-    width: 100%;
-  }
-
-  .project-section {
-    width: 90%;
-    margin: auto;
-  }
-
-  .about-section {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 20px 100px;
-  }
-
-  .dropdown p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .dropdown-list {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .dropdown-list li {
-    background: #f7f7f9;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 20px 30px;
-  }
-
-  .about-section .about-text {
-    padding: 0;
-  }
-
-  .about-section h2 {
-    padding: 2px 0;
   }
 }
