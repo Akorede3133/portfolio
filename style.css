@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
 *,
 *::after,
@@ -245,32 +245,21 @@ article {
   align-self: flex-start;
 }
 
-.project-description button:disabled,
-.about-section button:disabled {
-  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
-  border-radius: 8px;
-  outline: none;
-  margin: 20px 0;
-  padding: 10px;
-  font-size: 17px;
-  cursor: pointer;
-  background: #fff;
-  border: 1px solid #7f8cff;
-  color: #6070ff;
-}
-
 .project-description button:focus,
 .about-section button:focus,
 .contact-btn:focus {
   background: #fff;
+  background: #2230d2;
   border: 1px solid #7f8cff;
   color: #396df2;
+  color: #fff;
 }
 
-.project-description button:active,
-.about-section button:active {
-  background: #2230d2;
-  color: #fff;
+.project-description button:disabled,
+.about-section button:disabled {
+  background: #fff;
+  color: #5e6c84;
+  border: 1px solid #5e6c84;
 }
 
 .project-description button:hover,
@@ -304,7 +293,7 @@ article {
 .about-section h2 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 40px;
   color: #172b4d;
 }
