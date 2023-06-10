@@ -95,6 +95,19 @@ header {
   font-style: normal;
   font-size: 40px;
   color: rgba(23, 43, 77, 1);
+  animation-name: slideLeft;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .hero-desc {
