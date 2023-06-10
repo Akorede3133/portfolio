@@ -222,7 +222,6 @@ article {
 
 .project-description button,
 .about-section button {
-  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
   outline: none;
   margin: 20px 0;
@@ -245,8 +244,8 @@ article {
   align-self: flex-start;
 }
 
-.project-description button:focus,
-.about-section button:focus,
+.project-description button:active,
+.about-section button:active,
 .contact-btn:focus {
   background: #fff;
   background: #2230d2;
@@ -266,6 +265,7 @@ article {
 .about-section button:hover {
   background: #6070ff;
   color: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
 }
 
 .experience-list li::marker {
@@ -290,7 +290,7 @@ article {
   padding: 5px 0;
 }
 
-.about-section h2 {
+.about-section h3 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 900;
