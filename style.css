@@ -141,6 +141,19 @@ header {
   height: 20px;
 }
 
+.project-container img {
+  width: 100%;
+}
+
+.dropdown img {
+  width: 19px;
+}
+
+.hero-icon-container img:hover {
+  transition: all 0.7s linear;
+  transform: scale(1.3);
+}
+
 .project-section {
   display: grid;
   width: 90%;
@@ -156,10 +169,6 @@ article {
   padding: 15px;
   background-color: white;
   border-radius: 10px;
-}
-
-.project-container img {
-  width: 100%;
 }
 
 .dropdown-list li {
@@ -336,10 +345,6 @@ article {
   font-weight: 500;
   font-size: 15px;
   color: #253858;
-}
-
-.dropdown img {
-  width: 19px;
 }
 
 .form-section {
