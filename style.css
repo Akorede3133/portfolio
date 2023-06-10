@@ -222,16 +222,16 @@ article {
 
 .project-description button,
 .about-section button {
-  background: #4053fc;
   box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
   outline: none;
-  border: none;
   margin: 20px 0;
-  color: white;
   padding: 10px;
   font-size: 17px;
   cursor: pointer;
+  background: #fff;
+  border: 1px solid #7f8cff;
+  color: #6070ff;
 }
 
 .contact-btn {
@@ -245,6 +245,20 @@ article {
   align-self: flex-start;
 }
 
+.project-description button:disabled,
+.about-section button:disabled {
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  outline: none;
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #7f8cff;
+  color: #6070ff;
+}
+
 .project-description button:focus,
 .about-section button:focus,
 .contact-btn:focus {
@@ -256,7 +270,7 @@ article {
 .project-description button:hover,
 .about-section button:hover {
   background: #6070ff;
-  column-rule: #fff;
+  color: #fff;
 }
 
 .experience-list li::marker {
@@ -497,5 +511,9 @@ form textarea {
     margin-left: auto;
     margin-right: auto;
     padding: 20px 0;
+  }
+
+  .contact-btn {
+    align-self: center;
   }
 }
