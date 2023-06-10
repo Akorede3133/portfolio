@@ -287,7 +287,7 @@ article {
   background-color: #fff;
   margin-top: 100px;
   border-top-right-radius: 60px;
-  padding: 100px 15px;
+  padding: 10px 15px;
   overflow: hidden;
   width: 100%;
 }
@@ -468,13 +468,23 @@ form textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 100px 100px;
+    padding: 100px 200px 100px 143px;
+  }
+
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   .dropdown p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .dropdown.languages {
+    margin: 10px 0  20px 0;
   }
 
   .dropdown-list {
@@ -496,8 +506,12 @@ form textarea {
     padding: 0;
   }
 
+  .about-section .about-connect-text {
+    padding: 12px 0 20px 0;
+  }
+
   .about-section h2 {
-    padding: 2px 0;
+    padding: 0;
   }
 
   .form-section {
