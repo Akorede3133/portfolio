@@ -248,7 +248,7 @@ article {
 
 .about-section {
   background-color: #fff;
-  margin-top: 3rem;
+  margin-top: 100px;
   border-top-right-radius: 60px;
   padding: 100px 15px;
   overflow: hidden;
@@ -309,7 +309,7 @@ article {
 }
 
 .dropdown img {
-  width: 30px;
+  width: 19px;
 }
 
 .form-section {
@@ -419,5 +419,69 @@ form textarea {
 
   .see-break {
     display: none;
+  }
+  
+  article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  article:nth-child(even) {
+    padding: 15px 30px;
+  }
+
+  article:nth-child(even) div:nth-child(1) {
+    order: 2;
+  }
+
+  .project-description {
+    margin-top: 20px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .project-section {
+    width: 85%;
+    margin: auto;
+  }
+
+  .about-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 100px 100px;
+  }
+
+  .dropdown p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .dropdown-list li {
+    background: #f7f7f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 30px;
+  }
+
+  .about-section .about-text {
+    padding: 0;
+  }
+
+  .about-section h2 {
+    padding: 2px 0;
   }
 }
