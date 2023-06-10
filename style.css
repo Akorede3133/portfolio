@@ -233,6 +233,14 @@ article {
   color: #396df2;
 }
 
+project-description button:hover,
+.about-section button:hover {
+  background: #6070ff;
+  color: #fff;
+  transition: all 0.7s ease-in;
+  transform: scale(1.1);
+}
+
 .experience-list li::marker {
   color: gray;
 }
