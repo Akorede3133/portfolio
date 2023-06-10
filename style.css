@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
 *,
 *::after,
@@ -36,6 +36,7 @@ header {
   padding: 10px 0;
   border-bottom-left-radius: 7%;
   background-color: white;
+  margin-bottom: 100px;
 }
 
 .nav-link {
@@ -48,6 +49,14 @@ header {
   font-style: normal;
   font-size: 18px;
   color: blue;
+}
+
+.nav-link li > a {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #344563;
 }
 
 .header-nav > a:hover {
@@ -72,9 +81,9 @@ header {
   width: 100%;
   padding: 0 20px;
   background: url(images/header-shapes\ mobile.png);
-  background-position: top;
+  background-position: right 100% bottom 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,24 +222,60 @@ article {
 
 .project-description button,
 .about-section button {
-  background: #4053fc;
-  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
   outline: none;
-  border: none;
   margin: 20px 0;
-  color: white;
-  padding: 10px;
+  padding: 12px;
   font-size: 17px;
   cursor: pointer;
+  background: #fff;
+  border: 1px solid #7f8cff;
+  color: #6070ff;
+}
+
+.contact-btn {
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #6070ff;
+  align-self: flex-start;
+}
+
+.project-description button:active,
+.about-section button:active,
+.contact-btn:active {
+  background: #fff;
+  background: #2230d2;
+  border: 1px solid #7f8cff;
+  color: #396df2;
+  color: #fff;
+}
+
+.project-description button:disabled,
+.about-section button:disabled {
+  background: #fff;
+  color: #5e6c84;
+  border: 1px solid #5e6c84;
+}
+
+.project-description button:hover,
+.about-section button:hover {
+  background: #6070ff;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
 }
 
 .project-description button:focus,
-.about-section button:focus {
+.about-section button:focus,
+.contact-btn:active {
   background: #fff;
+  background: #2230d2;
   border: 1px solid #7f8cff;
-  border-radius: 8px;
   color: #396df2;
+  color: #fff;
 }
 
 .experience-list li::marker {
@@ -239,9 +284,9 @@ article {
 
 .about-section {
   background-color: #fff;
-  margin-top: 3rem;
+  margin-top: 100px;
   border-top-right-radius: 60px;
-  padding: 100px 15px;
+  padding: 10px 15px;
   overflow: hidden;
   width: 100%;
 }
@@ -255,10 +300,10 @@ article {
   padding: 5px 0;
 }
 
-.about-section h2 {
+.about-section h3 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 40px;
   color: #172b4d;
 }
@@ -300,15 +345,18 @@ article {
 }
 
 .dropdown img {
-  width: 30px;
+  width: 19px;
 }
 
 .form-section {
   width: 100%;
-  background: url(images/contact-shapes.png), url(images/mobile-contact-color.png);
-  background-position: top;
-  background-size: cover;
-  padding: 50px 24px;
+  min-height: 100vh;
+  background-color: rgba(96, 112, 255, 1);
+  background-image: url(images/contact-shapes.png);
+  background-position: left 100% bottom 75%;
+  background-repeat: no-repeat;
+  background-size: 208px;
+  padding: 100px 24px;
 }
 
 .form-section h2 {
@@ -358,32 +406,17 @@ form textarea {
   resize: none;
 }
 
-.button-container {
-  display: flex;
-  align-items: center;
-  align-self: flex-start;
-  gap: 7rem;
-}
+@media (min-width: 768px) {
+  .header-hero-section {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0 200px;
+    background: url(images/header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
-.button-container .contact-btn {
-  padding: 12px 16px;
-  background: #fff;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: #6070ff;
-}
-
-.button-container .circle {
-  width: 25px;
-  height: 25px;
-  background: hsl(0, 0%, 100%);
-  transform: rotate(48.94deg);
-  border-radius: 50%;
-}
-
-@media (min-width: 786px) {
   .toolbar-section {
     width: 80%;
     margin: auto;
@@ -396,12 +429,6 @@ form textarea {
   .header-nav ul {
     display: flex;
     gap: 2rem;
-  }
-
-  .header-hero-section {
-    width: 90%;
-    margin: 20px auto;
-    padding: 0 150px;
   }
 
   .see-break {
@@ -431,7 +458,7 @@ form textarea {
   }
 
   .project-section {
-    width: 90%;
+    width: 85%;
     margin: auto;
   }
 
@@ -440,7 +467,13 @@ form textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 20px 100px;
+    padding: 100px 200px 100px 143px;
+  }
+
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 
   .dropdown p {
@@ -449,9 +482,13 @@ form textarea {
     align-items: center;
   }
 
+  .dropdown.languages {
+    margin: 10px 0  20px 0;
+  }
+
   .dropdown-list {
     display: flex;
-    gap: 2rem;
+    gap: 0.7rem;
   }
 
   .dropdown-list li {
@@ -468,7 +505,34 @@ form textarea {
     padding: 0;
   }
 
+  .about-section .about-connect-text {
+    padding: 12px 0 20px 0;
+  }
+
   .about-section h2 {
-    padding: 2px 0;
+    padding: 0;
+  }
+
+  .form-section {
+    background-image: url(images/contact-shape-desktop.png);
+    background-position: left 20% top 50%;
+    background-size: 90%;
+    border-top-left-radius: 100px;
+  }
+
+  .form-section form {
+    width: 400px;
+    margin: auto;
+  }
+
+  .form-section > p {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+  }
+
+  .contact-btn {
+    align-self: center;
   }
 }
