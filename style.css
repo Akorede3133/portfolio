@@ -220,6 +220,7 @@ article {
 
 .project-description h2 {
   font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -228,11 +229,20 @@ article {
 }
 
 .project-description .experience-list,
-.project-description .skill-list {
+.project-description .skill-list,
+.pop-up .skill-list {
   display: flex;
   align-items: center;
   list-style-type: disc;
   gap: 2rem;
+}
+
+.pop-up .skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 20px;
 }
 
 .project-description .skill-list {
@@ -280,7 +290,8 @@ article {
 }
 
 .project-description button,
-.about-section button {
+.about-section button,
+.see-container button {
   border-radius: 8px;
   outline: none;
   margin: 20px 0;
@@ -313,6 +324,7 @@ article {
 
 .project-description button:active,
 .about-section button:active,
+.see-container button:active,
 .contact-btn:active {
   background: #fff;
   background: #2230d2;
@@ -322,6 +334,7 @@ article {
 }
 
 .project-description button:disabled,
+.see-container button:disabled,
 .about-section button:disabled {
   background: #fff;
   color: #5e6c84;
@@ -329,6 +342,7 @@ article {
 }
 
 .project-description button:hover,
+.see-container button:hover,
 .about-section button:hover {
   background: #6070ff;
   color: #fff;
@@ -337,6 +351,7 @@ article {
 
 .project-description button:focus,
 .about-section button:focus,
+.see-container button:focus,
 .contact-btn:active {
   background: #fff;
   background: #2230d2;
@@ -475,10 +490,13 @@ form textarea {
   left: 0;
   height: 100%;
   z-index: 2000;
-
-  /* background-color: #c1c7d0; */
   background-color: #c1c7d0b6;
   padding: 20px;
+  display: none;
+}
+
+.show-popup {
+  display: block;
 }
 
 .pop-up .overlay {
@@ -511,7 +529,7 @@ form textarea {
   font-size: 15px;
   line-height: 24px;
   color: #344563;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .see-container {
@@ -683,9 +701,25 @@ form textarea {
   }
 
   .pop-up {
-    width: 80%;
-    left: 50%;
-    transform: translate(-50%);
+    width: 100%;
     margin: auto;
+    padding: 30px;
+  }
+
+  .pop-up .overlay {
+    width: 80%;
+  }
+
+  .overlay .detail-img {
+    width: 100%;
+  }
+
+  .pop-up .pop-up-desc {
+    width: 80%;
+  }
+
+  .pop-up .flex-pop {
+    display: flex;
+    gap: 2rem;
   }
 }
