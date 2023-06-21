@@ -118,6 +118,10 @@ header {
   justify-content: center;
 }
 
+.blur-header-hero-section {
+  filter: blur(5px);
+}
+
 .hero-intro {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -464,6 +468,10 @@ form textarea {
     background-size: 100%;
   }
 
+  .blur-header-hero-section {
+    filter: unset;
+  }
+
   .nav-link {
     position: unset;
     z-index: unset;
@@ -476,6 +484,7 @@ form textarea {
     gap: unset;
     transition: unset;
   }
+
   .show-link {
     height: unset;
     padding: unset;
