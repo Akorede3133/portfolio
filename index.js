@@ -1,6 +1,7 @@
 const navLink = document.querySelector('.nav-link');
 const hamburgerIcon = document.querySelector('.toolbar-hamburger');
 const closeIcon = document.querySelector('.close-container');
+const links = document.querySelectorAll('.nav-link > li');
 const headerHeroSection = document.querySelector('.header-hero-section');
 hamburgerIcon.addEventListener('click', () => {
   navLink.classList.add('show-link');
@@ -10,4 +11,10 @@ hamburgerIcon.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
   navLink.classList.remove('show-link');
   headerHeroSection.classList.remove('blur-header-hero-section');
+});
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    navLink.classList.remove('show-link');
+    headerHeroSection.classList.remove('blur-header-hero-section');
+  });
 });
