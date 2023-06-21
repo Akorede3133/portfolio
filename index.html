@@ -16,10 +16,13 @@
                 <span class="toolbar-hamburger">
                     <img src="images/hamburger.png" alt="">
                 </span>
+                <span class="close-container">
+                    <img src="images/close-icon.png" alt="close-menu-icon">
+                </span>
                 <ul class="nav-link">
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -62,7 +65,8 @@
         </div>
     </header>
     <main>
-        <section class="project-section">
+        <!-- projeect-section-start -->
+        <section class="project-section" id="portfolio">
             <article class="project-container">
                 <div>
                     <a href="">
@@ -175,7 +179,8 @@
                 </div>
             </article>
         </section>
-        <section  class="about-section">
+        <!-- project-section-end -->
+        <section  class="about-section" id="about">
             <div>
                 <h3>About Myself</h3>
                 <p class="about-text">Hello I’m a software developer! I can help you build a product , 
@@ -249,7 +254,7 @@
                 </div>
             </div>
         </section>
-        <section class="form-section">
+        <section class="form-section" id="contact">
             <h2>Contact me</h2>
             <p>
                 If you have an application you are interested in 
@@ -264,5 +269,6 @@
             </form>
         </section>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
