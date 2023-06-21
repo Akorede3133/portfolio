@@ -303,6 +303,14 @@ article {
   align-self: flex-start;
 }
 
+.see-container button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .project-description button:active,
 .about-section button:active,
 .contact-btn:active {
@@ -459,6 +467,59 @@ form textarea {
   border: 1px solid hsl(198, 16%, 84%);
   border-radius: 8px;
   resize: none;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2000;
+
+  /* background-color: #c1c7d0; */
+  background-color: #c1c7d0b6;
+  padding: 20px;
+}
+
+.pop-up .overlay {
+  background: #fff;
+  width: 99%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.overlay .detail-img {
+  width: 100%;
+}
+
+.pop-up .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.pop-up .project-description .experience-list {
+  padding-bottom: 20px;
+}
+
+.pop-up-desc {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  padding: 5px 0;
+}
+
+.see-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
@@ -619,5 +680,12 @@ form textarea {
 
   .contact-btn {
     align-self: center;
+  }
+
+  .pop-up {
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    margin: auto;
   }
 }
