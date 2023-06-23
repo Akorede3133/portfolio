@@ -142,9 +142,11 @@ seeProjectBtns.forEach((btn) => {
     showPopUp(btn);
     popupSection.classList.add('show-popup');
     const closePopBtn = popupSection.querySelector('.pop-up-close-icon');
+    const scrollHeight = window.scrollY;
     closePopBtn.addEventListener('click', () => {
       popupSection.classList.remove('show-popup');
       popupSection.innerHTML = '';
+      window.scrollTo(0,scrollHeight);
     });
   });
 });
