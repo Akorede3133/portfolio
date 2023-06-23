@@ -138,7 +138,7 @@ function showPopUp(btn) {
   popupSection.insertAdjacentHTML('beforeend', element);
 }
 seeProjectBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
     showPopUp(btn);
     popupSection.classList.add('show-popup');
     window.scrollTo(0, 0);
