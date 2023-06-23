@@ -141,7 +141,6 @@ seeProjectBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     showPopUp(btn);
     popupSection.classList.add('show-popup');
-    window.scrollTo(0, 0);
     const closePopBtn = popupSection.querySelector('.pop-up-close-icon');
     closePopBtn.addEventListener('click', () => {
       popupSection.classList.remove('show-popup');
