@@ -81,6 +81,10 @@ header {
   color: blue;
 }
 
+.see-container > a {
+  width: 100%;
+}
+
 .nav-link li > a {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -186,6 +190,10 @@ header {
   width: 19px;
 }
 
+.dropdown-list li img {
+  width: auto;
+}
+
 .hero-icon-container img:hover {
   transition: all 0.7s linear;
   transform: scale(1.3);
@@ -215,11 +223,12 @@ article {
   gap: 1rem;
   border-radius: 10px;
   margin-top: 10px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .project-description h2 {
   font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -228,11 +237,20 @@ article {
 }
 
 .project-description .experience-list,
-.project-description .skill-list {
+.project-description .skill-list,
+.pop-up .skill-list {
   display: flex;
   align-items: center;
   list-style-type: disc;
   gap: 2rem;
+}
+
+.pop-up .skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 20px;
 }
 
 .project-description .skill-list {
@@ -280,7 +298,8 @@ article {
 }
 
 .project-description button,
-.about-section button {
+.about-section button,
+.see-container button {
   border-radius: 8px;
   outline: none;
   margin: 20px 0;
@@ -303,8 +322,17 @@ article {
   align-self: flex-start;
 }
 
+.see-container button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .project-description button:active,
 .about-section button:active,
+.see-container button:active,
 .contact-btn:active {
   background: #fff;
   background: #2230d2;
@@ -314,6 +342,7 @@ article {
 }
 
 .project-description button:disabled,
+.see-container button:disabled,
 .about-section button:disabled {
   background: #fff;
   color: #5e6c84;
@@ -321,6 +350,7 @@ article {
 }
 
 .project-description button:hover,
+.see-container button:hover,
 .about-section button:hover {
   background: #6070ff;
   color: #fff;
@@ -329,6 +359,7 @@ article {
 
 .project-description button:focus,
 .about-section button:focus,
+.see-container button:focus,
 .contact-btn:active {
   background: #fff;
   background: #2230d2;
@@ -345,7 +376,7 @@ article {
   background-color: #fff;
   margin-top: 100px;
   border-top-right-radius: 60px;
-  padding: 10px 15px;
+  padding: 100px 24px;
   overflow: hidden;
   width: 100%;
 }
@@ -459,6 +490,79 @@ form textarea {
   border: 1px solid hsl(198, 16%, 84%);
   border-radius: 8px;
   resize: none;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2000;
+  background-color: #c1c7d0b6;
+  padding: 20px;
+  display: none;
+}
+
+.show-popup {
+  display: block;
+}
+
+.pop-up .overlay {
+  background: #fff;
+  width: 99%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.overlay .detail-img {
+  width: 100%;
+}
+
+.pop-up .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pop-up .head h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #091e42;
+  text-transform: capitalize;
+}
+
+.pop-up .pop-up-close-icon {
+  cursor: pointer;
+}
+
+.pop-up .project-description .experience-list {
+  padding-bottom: 20px;
+}
+
+.pop-up .flex-pop {
+  margin-top: 20px;
+}
+
+.pop-up-desc {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  padding-bottom: 10px;
+}
+
+.see-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
@@ -619,5 +723,25 @@ form textarea {
 
   .contact-btn {
     align-self: center;
+  }
+
+  .pop-up {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .pop-up .overlay {
+    width: 80%;
+  }
+
+  .overlay .detail-img {
+    width: 100%;
+  }
+
+  .pop-up .flex-pop {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
   }
 }
