@@ -573,11 +573,7 @@ form textarea {
   padding: 3px 5px;
   border-radius: 5px;
   opacity: 0;
-  transition: all 0.3s linear;
-}
-
-.show-error {
-  opacity: 1;
+  transition: all 0.7s linear;
 }
 
 @media (min-width: 768px) {
