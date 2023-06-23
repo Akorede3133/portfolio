@@ -138,15 +138,16 @@ function showPopUp(btn) {
   popupSection.insertAdjacentHTML('beforeend', element);
 }
 seeProjectBtns.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', () => {
     showPopUp(btn);
     popupSection.classList.add('show-popup');
+    window.scrollTo(0, 0);
     const closePopBtn = popupSection.querySelector('.pop-up-close-icon');
     const scrollHeight = window.scrollY;
     closePopBtn.addEventListener('click', () => {
       popupSection.classList.remove('show-popup');
       popupSection.innerHTML = '';
-      window.scrollTo(0,scrollHeight);
+      window.scrollTo(0, scrollHeight);
     });
   });
 });
