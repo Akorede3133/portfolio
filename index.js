@@ -161,7 +161,7 @@ form.addEventListener('submit', (e) => {
     if (value[i].codePointAt(0) >= 65 && value[i].codePointAt(0) <= 90) {
       e.preventDefault();
       errorPara.classList.add('show-error');
-      setTimeout(() => errorPara.classList.remove('show-error'), 2000)
+      setTimeout(() => errorPara.classList.remove('show-error'), 2000);
     }
   }
 });
