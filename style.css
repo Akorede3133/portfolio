@@ -565,6 +565,21 @@ form textarea {
   gap: 20px;
 }
 
+.error {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  background-color: rgb(244, 67, 67);
+  color: white;
+  padding: 3px 5px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.show-error {
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   .header-hero-section {
     width: 90%;
