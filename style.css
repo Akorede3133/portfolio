@@ -724,4 +724,24 @@ form textarea {
   .contact-btn {
     align-self: center;
   }
+
+  .pop-up {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .pop-up .overlay {
+    width: 80%;
+  }
+
+  .overlay .detail-img {
+    width: 100%;
+  }
+
+  .pop-up .flex-pop {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
 }
