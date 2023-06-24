@@ -9,6 +9,7 @@ const form = document.querySelector('form');
 const email = document.querySelector('.email');
 const errorPara = document.querySelector('.error');
 const fullName = document.querySelector('.fullname');
+const message = document.querySelector('.message');
 const autoFills = document.querySelectorAll('.auto-fills');
 const projects = [
   {
@@ -178,7 +179,7 @@ form.addEventListener('submit', (e) => {
 /** * ---- End of Contact form validation functionality ---- ** */
 
 /** * ---- Start of Local Storage Functionality ---- ** */
-const detailObj = { name: '', email: '' };
+const detailObj = { name: '', email: '', message: '' };
 const storage = localStorage.getItem('details') ? JSON.parse(localStorage.getItem('details')) : detailObj;
 localStorage.setItem('details', JSON.stringify(storage));
 autoFills.forEach((autofill) => {
@@ -186,8 +187,11 @@ autoFills.forEach((autofill) => {
     if (e.target.name === 'fullName') {
       storage.name = e.target.value;
       localStorage.setItem('details', JSON.stringify(storage));
-    } else {
+    } else if (e.target.name === 'email') {
       storage.email = e.target.value;
+      localStorage.setItem('details', JSON.stringify(storage));
+    } else {
+      storage.message = e.target.value;
       localStorage.setItem('details', JSON.stringify(storage));
     }
   });
@@ -196,5 +200,6 @@ autoFills.forEach((autofill) => {
 window.addEventListener('DOMContentLoaded', () => {
   fullName.value = storage.name;
   email.value = storage.email;
+  message.value = storage.message;
 });
 /** * ---- End of Local Storage Functionality ---- ** */
