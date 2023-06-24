@@ -8,6 +8,8 @@ const popupSection = document.querySelector('.pop-up');
 const form = document.querySelector('form');
 const email = document.querySelector('.email');
 const errorPara = document.querySelector('.error');
+const fullName = document.querySelector('.fullname');
+const autoFills = document.querySelectorAll('.auto-fills');
 const projects = [
   {
     name: 'tonic',
@@ -46,6 +48,7 @@ const projects = [
     id: 'uber',
   },
 ];
+/** * ---- Start of Mobile Menu display functionality ---- ** */
 hamburgerIcon.addEventListener('click', () => {
   navLink.classList.add('show-link');
   headerHeroSection.classList.add('blur-header-hero-section');
@@ -61,7 +64,9 @@ links.forEach((link) => {
     headerHeroSection.classList.remove('blur-header-hero-section');
   });
 });
+/** * ---- End of Mobile Menu display functionality ---- ** */
 
+/** * ---- Start of Dynamic Display of Project Cards ---- ** */
 const projectElements = projects.map((project) => (
   `       <article class="project-container">
   <div>
@@ -91,6 +96,9 @@ const projectElements = projects.map((project) => (
 </article>`
 )).join('');
 projectSection.insertAdjacentHTML('beforeend', projectElements);
+/** * ---- End of Dynamic Display of Project Cards ---- ** */
+
+/** * ---- Start of pop up window functionality ---- ** */
 const seeProjectBtns = projectSection.querySelectorAll('.project-description button');
 function showPopUp(btn) {
   const objElement = projects.find((project) => project.id === btn.id);
@@ -154,7 +162,9 @@ seeProjectBtns.forEach((btn) => {
     });
   });
 });
+/** * ---- End of pop up window functionality ---- ** */
 
+/** * ---- Start of Contact form validation functionality ---- ** */
 form.addEventListener('submit', (e) => {
   const value = email.value.replace(/[@.0-9]/gi, '');
   for (let i = 0; i < value.length; i += 1) {
@@ -165,3 +175,21 @@ form.addEventListener('submit', (e) => {
     }
   }
 });
+/** * ---- End of Contact form validation functionality ---- ** */
+
+/** * ---- Start of Local Storage Functionality ---- ** */
+const detailObj = { name: '', email: '' };
+const storage = localStorage.getItem('details') ? JSON.parse(localStorage.getItem('details')) : detailObj;
+localStorage.setItem('details', JSON.stringify(storage));
+autoFills.forEach((autofill) => {
+  autofill.addEventListener('input', (e) => {
+    if (e.target.name === 'fullName') {
+      storage.name = e.target.value;
+      localStorage.setItem('details', JSON.stringify(storage));
+    } else {
+      storage.email = e.target.value;
+      localStorage.setItem('details', JSON.stringify(storage));
+    }
+  });
+});
+/** * ---- End of Local Storage Functionality ---- ** */
