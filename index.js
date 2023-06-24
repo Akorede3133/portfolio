@@ -5,6 +5,9 @@ const links = document.querySelectorAll('.nav-link > li');
 const headerHeroSection = document.querySelector('.header-hero-section');
 const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
+const form = document.querySelector('form');
+const email = document.querySelector('.email');
+const errorPara = document.querySelector('.error');
 const projects = [
   {
     name: 'tonic',
@@ -150,4 +153,15 @@ seeProjectBtns.forEach((btn) => {
       window.scrollTo(0, scrollHeight);
     });
   });
+});
+
+form.addEventListener('submit', (e) => {
+  const value = email.value.replace(/[@.0-9]/gi, '');
+  for (let i = 0; i < value.length; i += 1) {
+    if (value[i].codePointAt(0) >= 65 && value[i].codePointAt(0) <= 90) {
+      e.preventDefault();
+      errorPara.classList.add('show-error');
+      setTimeout(() => errorPara.classList.remove('show-error'), 2000);
+    }
+  }
 });
