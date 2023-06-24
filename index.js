@@ -192,4 +192,9 @@ autoFills.forEach((autofill) => {
     }
   });
 });
+// Autofills input fields on reload
+window.addEventListener('DOMContentLoaded', () => {
+  fullName.value = storage.name;
+  email.value = storage.email;
+});
 /** * ---- End of Local Storage Functionality ---- ** */
