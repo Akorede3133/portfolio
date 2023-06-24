@@ -576,6 +576,10 @@ form textarea {
   transition: all 0.7s linear;
 }
 
+.show-error {
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
   .header-hero-section {
     width: 90%;
