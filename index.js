@@ -15,7 +15,7 @@ const projects = [
   {
     name: 'Rest Countries API',
     description: 'This is a web application built with TypeScript, Tailwind, React, and Vite that utilizes the Rest Countries API to display information about countries.',
-    image: 'images/countries_api.png',
+    image: 'images/countries_api.webp',
     technologies: ['Typescript', 'Tailwind', 'React'],
     liveLink: 'https://akrca.netlify.app/',
     sourceLink: 'https://github.com/Akorede3133/rest-countries-api',
@@ -24,7 +24,7 @@ const projects = [
   {
     name: 'Budget Management App',
     description: 'This is a budget management app built using React, TypeScript, and Tailwind CSS. The app allows users to manage their expenses and incomes, create budgets, and track their spending.',
-    image: 'images/budget_app.png',
+    image: 'images/budget_app.webp',
     technologies: ['Typescript', 'Tailwind', 'React'],
     liveLink: 'https://akbudget-app.netlify.app/',
     sourceLink: 'https://github.com/Akorede3133/budget_management_app',
@@ -33,7 +33,7 @@ const projects = [
   {
     name: 'Conference Website',
     description: 'The website is designed to provide attendees with essential details about the summit, including schedules, speakers, venue information, registration, and more.',
-    image: 'images/conference.png',
+    image: 'images/conference.webp',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://akorede3133.github.io/oscafest-conference/',
     sourceLink: 'https://github.com/Akorede3133/oscafest-conference/',
