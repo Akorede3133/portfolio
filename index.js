@@ -13,10 +13,31 @@ const message = document.querySelector('.message');
 const autoFills = document.querySelectorAll('.auto-fills');
 const projects = [
   {
+    name: 'Hotel Management App',
+    description: 'Hotel Booking System - An app designed to enable clients to make reservations for hotel rooms.',
+    image: 'images/hotel.png',
+    technologies: ['React', 'Ruby on Rails', 'Redux', 'TailwindCSS'],
+    experience: ['Self-employed', 'Full-stack', '2024'],
+    liveLink: 'https://hotel-booking-3wof.onrender.com/',
+    sourceLink: 'https://github.com/anyars-encarta/hotel-booking-front-end',
+    id: 'hotel',
+  },
+  {
+    name: 'CoinSage',
+    description: 'Coinsage is a robust web application built with React, TypeScript, and Tailwind CSS, designed to offer users real-time data and insights into the world of cryptocurrencies. Whether you\'re a seasoned crypto investor or just curious about the market, Coinsage has you covered.',
+    image: 'images/coinsage.png',
+    technologies: ['React', 'Typescript', 'Redux', 'TailwindCSS'],
+    experience: ['Self-employed', 'Front-end', '2023'],
+    liveLink: 'https://coinsage.onrender.com/',
+    sourceLink: 'https://github.com/Akorede3133/CoinSage',
+    id: 'coinsage',
+  },
+  {
     name: 'Rest Countries API',
     description: 'This is a web application built with TypeScript, Tailwind, React, and Vite that utilizes the Rest Countries API to display information about countries.',
     image: 'images/countries_api.webp',
     technologies: ['Typescript', 'Tailwind', 'React'],
+    experience: ['Self-employed', 'Front-end', '2023'],
     liveLink: 'https://akrca.netlify.app/',
     sourceLink: 'https://github.com/Akorede3133/rest-countries-api',
     id: 'countries',
@@ -26,6 +47,7 @@ const projects = [
     description: 'This is a budget management app built using React, TypeScript, and Tailwind CSS. The app allows users to manage their expenses and incomes, create budgets, and track their spending.',
     image: 'images/budget_app.webp',
     technologies: ['Typescript', 'Tailwind', 'React'],
+    experience: ['Self-employed', 'Front-end', '2023'],
     liveLink: 'https://akbudget-app.netlify.app/',
     sourceLink: 'https://github.com/Akorede3133/budget_management_app',
     id: 'budget',
@@ -35,6 +57,7 @@ const projects = [
     description: 'The website is designed to provide attendees with essential details about the summit, including schedules, speakers, venue information, registration, and more.',
     image: 'images/conference.webp',
     technologies: ['HTML', 'CSS', 'javascript'],
+    experience: ['Self-employed', 'Front-end', '2023'],
     liveLink: 'https://akorede3133.github.io/oscafest-conference/',
     sourceLink: 'https://github.com/Akorede3133/oscafest-conference/',
     id: 'conference',
@@ -69,9 +92,11 @@ const projectElements = projects.map((project) => (
   <div class="project-description">
       <h2>${project.name}</h2>
       <ul class="experience-list">
-          <li>CANOPY</li>
-          <li>Backend Dev</li>
-          <li>2015</li>
+          ${ project?.experience?.map((experience) => (
+            `<li>${experience}</li>`
+
+          )).join('')}
+        
       </ul>
       <p>${project.description}</p>
       <ul class="skill-list">
