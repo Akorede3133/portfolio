@@ -11,6 +11,33 @@ const errorPara = document.querySelector('.error');
 const fullName = document.querySelector('.fullname');
 const message = document.querySelector('.message');
 const autoFills = document.querySelectorAll('.auto-fills');
+const dropdowns = document.querySelectorAll('.dropdown');
+
+dropdowns.forEach((dropdown) => {
+  dropdown.style.height = '65px';
+  dropdown.addEventListener('click', (e) => {
+    const dropdownHeight = dropdown.getBoundingClientRect().height;
+    const dropList = dropdown.querySelector('.dropdown-list');
+    const dropListHeight = dropList.getBoundingClientRect().height;
+    dropdowns.forEach((drop) => {
+      drop.style.height = '65px';
+      drop.classList.add('hide-down-arrow');
+      drop.classList.remove('hide-right-arrow');
+
+    })
+
+    if (dropdownHeight > 65) {
+      e.currentTarget.style.height = `65px`;
+      e.currentTarget.classList.add('hide-down-arrow');
+      e.currentTarget.classList.remove('hide-right-arrow');
+
+    } else {
+      e.currentTarget.style.height = `${dropListHeight + 71}px`;
+      e.currentTarget.classList.remove('hide-down-arrow');
+      e.currentTarget.classList.add('hide-right-arrow');
+    }
+  })
+})
 const projects = [
   {
     name: 'Hotel Management App',

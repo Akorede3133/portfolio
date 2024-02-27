@@ -191,6 +191,7 @@ header {
   height: 40px;
 }
 
+
 .dropdown-list li img {
   width: auto;
 }
@@ -409,9 +410,20 @@ article {
   padding: 7px 0;
 }
 
-.dropdown:not(:first-child) {
+.dropdown {
+  cursor: pointer;
   padding: 15px 0;
   border-bottom: 1px solid  #dfe1e6;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+}
+
+.dropdown.hide-down-arrow .arrow-down {
+  display: none;
+}
+
+.dropdown.hide-right-arrow .arrow-right {
+  display: none;
 }
 
 .dropdown p {
@@ -695,6 +707,7 @@ form textarea {
   .dropdown-list {
     display: flex;
     gap: 0.7rem;
+    transition: all 0.5s ease-in;
   }
 
   .dropdown-list li {
