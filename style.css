@@ -67,9 +67,9 @@ header {
 
 .close-container {
   position: absolute;
-  top: 5%;
-  right: 10%;
-  z-index: 1000;
+  top: 50%;
+  right: 5%;
+  z-index: 10000;
   cursor: pointer;
 }
 
@@ -96,16 +96,22 @@ header {
   color: #fff;
 }
 
+
 .header-nav > a:hover {
   color: blue;
 }
 
 .toolbar-section {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
+  background-color: #ffffffad;
+  padding: 0.5rem;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  margin: auto;
+  width: 100%;
 }
 
 .toolbar-hamburger {
@@ -605,6 +611,10 @@ form textarea {
     background-size: 100%;
   }
 
+  .close-container {
+    display: none;
+  }
+
   .blur-header-hero-section {
     filter: unset;
   }
@@ -628,7 +638,8 @@ form textarea {
   }
 
   .toolbar-section {
-    width: 80%;
+    width: 100%;
+    z-index: 5000;
     margin: auto;
   }
 

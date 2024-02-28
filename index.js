@@ -13,6 +13,9 @@ const message = document.querySelector('.message');
 const autoFills = document.querySelectorAll('.auto-fills');
 const dropdowns = document.querySelectorAll('.dropdown');
 
+closeIcon.style.display = 'none'
+
+
 dropdowns.forEach((dropdown) => {
   dropdown.style.height = '65px';
   dropdown.addEventListener('click', (e) => {
@@ -93,11 +96,14 @@ const projects = [
 /** * ---- Start of Mobile Menu display functionality ---- ** */
 hamburgerIcon.addEventListener('click', () => {
   navLink.classList.add('show-link');
+  closeIcon.style.display = 'block'
   headerHeroSection.classList.add('blur-header-hero-section');
 });
 
 closeIcon.addEventListener('click', () => {
   navLink.classList.remove('show-link');
+  closeIcon.style.display = 'none'
+
   headerHeroSection.classList.remove('blur-header-hero-section');
 });
 links.forEach((link) => {
