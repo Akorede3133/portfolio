@@ -68,7 +68,7 @@ const projects = [
     image: 'images/countries_api.webp',
     technologies: ['Typescript', 'Tailwind', 'React'],
     experience: ['Self-employed', 'Front-end', '2023'],
-    liveLink: 'https://akrca.netlify.app/',
+    liveLink: 'https://rest-countries-mc3t.onrender.com/',
     sourceLink: 'https://github.com/Akorede3133/rest-countries-api',
     id: 'countries',
   },
@@ -78,7 +78,7 @@ const projects = [
     image: 'images/budget_app.webp',
     technologies: ['Typescript', 'Tailwind', 'React'],
     experience: ['Self-employed', 'Front-end', '2023'],
-    liveLink: 'https://akbudget-app.netlify.app/',
+    liveLink: 'https://budget-management-app-vews.onrender.com/',
     sourceLink: 'https://github.com/Akorede3133/budget_management_app',
     id: 'budget',
   },
@@ -180,13 +180,13 @@ function showPopUp(btn) {
 }
       </ul>
       <div class="see-container">
-        <a href=${objElement.liveLink}>
+        <a href=${objElement.liveLink} target=_blank>
           <button>
             <span>see live</span>
             <img src="images/see-live-icon.png" alt="">
           </button>
         </a>
-      <a href=${objElement.sourceLink}>
+      <a href=${objElement.sourceLink} target=_blank>
         <button>
           <span>see source</span>
           <img src="images/see-source-icon.png" alt="">
